@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('token_code');
             $table->foreignId('token_user');
             $table->dateTime('token_exipry');
+            $table->string('token_status')->default('Valid');
             $table->timestamps();
         });
     }

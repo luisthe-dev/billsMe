@@ -14,5 +14,6 @@ class Token extends Model
         'token_code',
         'token_user',
         'token_exipry',
+        'token_status'
     ];
 }

@@ -17,8 +17,12 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
+            $table->string('referral_code')->unique();
+            $table->string('referred_by')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('is_frozen')->default(false);
+            $table->boolean('is_deleted')->default(false);
             $table->timestamps();
         });
     }

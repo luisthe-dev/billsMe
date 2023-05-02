@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,12 +16,17 @@ class User extends Authenticatable
         'last_name',
         'email',
         'phone',
+        'referral_code',
+        'referred_by',
         'email_verified_at',
         'password',
+        'is_frozen',
+        'is_deleted'
     ];
 
     protected $hidden = [
         'email_verified_at',
         'password',
+        'is_deleted'
     ];
 }
